@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arriendo Acogedor Departamento en Macul</title>
+    <!-- Enlace al CSS de Lightbox2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <style>
         body {
@@ -45,13 +46,25 @@
             font-size: 1.8em;
             color: #333;
         }
-        .gallery img {
+        .gallery .image-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .gallery .image-group a {
+            display: block;
+            width: calc(50% - 15px); /* Ajusta el tamaño y el margen */
+        }
+        .gallery .image-group img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery .image-group img:hover {
+            transform: scale(1.05); /* Efecto de zoom en el hover */
         }
         .cta-button {
             display: inline-block;
@@ -111,8 +124,7 @@
                 font-size: 12px;
             }
         }
-
-       /* Estilo para el botón flotante de WhatsApp */
+        /* Estilo para el botón flotante de WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -123,18 +135,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 1000; /* Asegura que el botón esté siempre sobre otros elementos */
         }
-
         .whatsapp-icon {
             width: 60px; /* Tamaño ajustado del ícono */
             height: 60px; /* Tamaño ajustado del ícono */
             transition: opacity 0.3s ease;
         }
-
         .whatsapp-float:hover .whatsapp-icon {
             opacity: 0.8; /* Efecto al pasar el mouse */
         }
-
-
         /* Estilo para los enlaces de contacto */
         .contact-links {
             margin-top: 10px;
@@ -205,28 +213,22 @@
     <!-- Galería de Imágenes -->
     <section class="section gallery">
         <h2>Galería de Imágenes</h2>
-        <a href="https://onedrive.live.com/embed?resid=405B99E173268D9F%211166272&authkey=%21AFiL18yOZEQS7CU&width=2785&height=2785" data-lightbox="gallery" data-title="Interior del departamento">
-            <img src="https://onedrive.live.com/embed?resid=405B99E173268D9F%211166272&authkey=%21AFiL18yOZEQS7CU&width=2785&height=2785" alt="Interior del departamento">
-        </a>
-        <a href="https://onedrive.live.com/embed?resid=405B99E173268D9F%211166270&authkey=%21AEIkO0uRxqq9lJ4&width=2594&height=2594" data-lightbox="gallery" data-title="Cocina y Terrazas">
-            <img src="https://onedrive.live.com/embed?resid=405B99E173268D9F%211166270&authkey=%21AEIkO0uRxqq9lJ4&width=2594&height=2594" alt="Cocina y Terrazas">
-        </a>
+        <div class="image-group">
+            <a href="https://roro051987.github.io/dpto/img/Distribucio%CC%81n.jpg" data-lightbox="gallery" data-title="Interior del departamento">
+                <img src="https://roro051987.github.io/dpto/img/Distribucio%CC%81n.jpg" alt="Interior del departamento">
+            </a>
+            <a href="https://roro051987.github.io/dpto/img/Ubicación.jpg" data-lightbox="gallery" data-title="Cocina y Terrazas">
+                <img src="https://roro051987.github.io/dpto/img/Ubicación.jpg" alt="Cocina y Terrazas">
+            </a>
+        </div>
     </section>
 
     <!-- Contacto -->
     <section class="section">
         <h2>Contacto</h2>
         <p>Para más información o para coordinar una visita, contáctanos a través de los siguientes medios:</p>
-        <li><strong>Teléfono:</strong> <a href="tel:+56993221970">
-            Llamar al +56993221970
-        </a></li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/56993221970?text=Hola%20Rodrigo,%20te%20escribo%20por%20el%20departamento%20que%20tienes%20publicado%20en%20Macul" target="_blank">
-                Mensaje a +56993221970
-            </a></li>
-            <li><strong>Correo Electrónico:</strong><a href="mailto:r.cancino.yanez@gmail.com" target="_blank">
-                r.cancino.yanez@gmail.com
-            </a></li>
-        
+        <li><strong>Teléfono:</strong> <a href="tel:+56993221970">Llamar al +56993221970</a></li>
+        <li><strong>Correo Electrónico:</strong> <a href="mailto:r.cancino.yanez@gmail.com" target="_blank">r.cancino.yanez@gmail.com</a></li>
     </section>
 
 </div>
@@ -236,11 +238,11 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
 </a>
 
-
 <footer>
     <p>© 2024 Renta Departamento en Macul. Todos los derechos reservados.</p>
 </footer>
 
+<!-- Incluye Lightbox2 y Font Awesome -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 <!-- Incluye Font Awesome para el icono de WhatsApp -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
