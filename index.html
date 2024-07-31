@@ -75,21 +75,6 @@
             text-align: center;
             font-size: 0.9em;
         }
-        .whatsapp-button {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-top: 10px;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-        .whatsapp-button:hover {
-            background-color: #128c7e;
-        }
         .map-icon {
             vertical-align: middle;
             width: 24px; /* Tamaño ajustado */
@@ -106,7 +91,7 @@
             .section h2 {
                 font-size: 1.4em;
             }
-            .cta-button, .whatsapp-button {
+            .cta-button {
                 padding: 10px 20px;
                 font-size: 14px;
             }
@@ -121,10 +106,29 @@
             .section h2 {
                 font-size: 1.2em;
             }
-            .cta-button, .whatsapp-button {
+            .cta-button {
                 padding: 8px 16px;
                 font-size: 12px;
             }
+        }
+
+        /* Estilo para el botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 24px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            z-index: 1000; /* Asegura que el botón esté siempre sobre otros elementos */
+        }
+        .whatsapp-float:hover {
+            background-color: #128c7e;
         }
     </style>
 </head>
@@ -150,19 +154,20 @@
         <p><strong>Tamaño:</strong> 63 m²</p>
         <p><strong>Precio de Arriendo Mensual:</strong> 14.5 UF</p>
         <p><strong>Gastos Comunes:</strong> Aproximadamente $70.000 CLP</p>
-        <p><strong>Descripción:</strong> Vive en un moderno departamento de 63 m² en Condominio Alto Vespucio. Este acogedor hogar cuenta con 2 dormitorios, 2 baños, 2 terrazas y una cocina separada. Disfruta de la comodidad de un estacionamiento subterráneo para mantener tu vehículo resguardado y una bodega.</p>
+        <p><strong>Descripción:</strong> Vive en un moderno departamento de 63 m² en Condominio Alto Vespucio piso 13 orientación sur. Este acogedor hogar cuenta con 2 dormitorios, 2 baños, 2 terrazas y una cocina separada. Disfruta de la comodidad de un estacionamiento subterráneo para mantener tu vehículo resguardado y una bodega.</p>
     </section>
 
     <!-- Características Adicionales -->
     <section class="section">
         <h2>Características Adicionales</h2>
         <ul>
-            <li><strong>Full Electric:</strong> El apartamento es totalmente eléctrico, sin cuentas de gas ni agua caliente.</li>
+            <li><strong>Conectividad:</strong> El departamento se encuentra cercano a Clínica Bupa Santiago, Clínica Davila Vespucio, Clínica U. de Chile, Hospital Luis Tisné (Cordillera), Mall Paseo Quilín, Homecenter, Easy, Supermercado, Colegios, Locales comerciales, Feria Libre Juan Pinto Duran, etc.</li>
+            <li><strong>Full Electric:</strong> El departamento es totalmente eléctrico, sin cuentas de gas ni agua caliente.</li>
             <li><strong>Recién Remodelado:</strong> Disfruta de un espacio recién pintado, con pisos y terminaciones nuevas.</li>
             <li><strong>Aire Acondicionado:</strong> El departamento se calefacciona completo con el aire acondicionado, no necesitarás otra calefacción.</li>
             <li><strong>Dormitorio Principal:</strong> Baño en suite equipado con Shower Door para mayor comodidad y walking closet.</li>
             <li><strong>Cocina:</strong> Separada del living comedor, encimera eléctrica con menos de un año de uso, espacio para refrigerador y conexión de lavadora.</li>
-            <li><strong>Termo Eléctrico:</strong> Nuevo para un suministro constante de agua caliente.</li>
+            <li><strong>Termo Eléctrico:</strong> Nuevo con dos meses de uso para un suministro constante de agua caliente.</li>
         </ul>
     </section>
 
@@ -176,13 +181,7 @@
             <li><strong>Quinchos:</strong> Áreas para asados y reuniones al aire libre.</li>
         </ul>
     </section>
- <!-- Ubicación -->
- <section class="section gallery">
-    <h2>Ubicación y Conectividad</h2>
-    <a href="https://onedrive.live.com/embed?resid=405B99E173268D9F%211166269&authkey=%21ADjCt5VKz_ooQNg&width=2849&height=2849" data-lightbox="gallery" data-title="Exterior y Espacios Comunes">
-        <img src="https://onedrive.live.com/embed?resid=405B99E173268D9F%211166269&authkey=%21ADjCt5VKz_ooQNg&width=2849&height=2849" alt="Exterior y Espacios Comunes">
-    </a>
-</section>
+ 
     <!-- Galería de Imágenes -->
     <section class="section gallery">
         <h2>Galería de Imágenes</h2>
@@ -198,17 +197,21 @@
     <section class="section">
         <h2>Contacto</h2>
         <p>Para más información o para coordinar una visita, contáctanos directamente por WhatsApp:</p>
-        <a href="https://wa.me/56993221970" class="whatsapp-button" target="_blank">
-            Contactar por WhatsApp
-        </a>
     </section>
 
 </div>
 
+<!-- Botón Flotante de WhatsApp -->
+<a href="https://wa.me/56993221970?text=Hola%20Rodrigo,%20te%20escribo%20por%20el%20departamento%20que%20tienes%20publicado%20en%20Macul" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fa fa-whatsapp"></i>
+</a>
+
 <footer>
-    <p>© 2024 Renta Departamento en La Florida. Todos los derechos reservados.</p>
+    <p>© 2024 Renta Departamento en Macul. Todos los derechos reservados.</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<!-- Incluye Font Awesome para el icono de WhatsApp -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
